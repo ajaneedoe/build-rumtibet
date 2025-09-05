@@ -1,7 +1,3 @@
-h1 {
-  font-family: "NEXT-ART";
-}
-
 @font-face {
   font-family: "NEXT-ART";
   src: url("../assets/fonts/NEXT-ART-Bold.otf") format("opentype");
@@ -188,17 +184,63 @@ footer {
 
 .input-box {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  position: relative;
 }
 .input-box label {
-  margin-left: -36px;
   cursor: pointer;
+}
+.input-box label.label-icon {
+  position: absolute;
+  top: 18px;
+  right: 18px;
 }
 .input-box:hover .date-input::placeholder {
   color: #f2be22;
 }
 .input-box:hover .date-input + label {
   color: #f2be22;
+}
+
+.nice-select {
+  background-color: transparent;
+  border: 1px solid #e1e3e4;
+  border-radius: 8px;
+  padding: 0 36px 0 16px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fdfdfd;
+  height: 58px;
+  line-height: 58px;
+}
+.nice-select:after {
+  border-bottom: 2px solid #FDFDFD;
+  border-right: 2px solid #FDFDFD;
+  height: 11px;
+  margin-top: -8px;
+  width: 11px;
+  right: 16px;
+}
+.nice-select .nice-select-dropdown {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+}
+.nice-select .option:hover,
+.nice-select .option.focus,
+.nice-select .option.selected.focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+}
+.nice-select.open + label {
+  opacity: 0;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.d-none {
+  display: none;
 }
 
 ::selection {
