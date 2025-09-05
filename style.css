@@ -58,9 +58,9 @@ body {
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   font-size: 16px;
-  background: #f3f5f4;
-  color: #18121e;
-  font-family: "Nunito Sans", sans-serif;
+  background: #F3F5F4;
+  color: #18121E;
+  font-family: "NunitoSans";
   display: flex;
   flex-direction: column;
 }
@@ -73,7 +73,29 @@ input,
 button,
 textarea,
 select {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "NunitoSans";
+}
+
+input {
+  background-color: transparent;
+  border: 1px solid #e1e3e4;
+  border-radius: 8px;
+  padding: 16px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #FDFDFD;
+}
+input::placeholder {
+  color: #FDFDFD;
+}
+
+label {
+  color: #FDFDFD;
+}
+label svg {
+  width: 18px;
+  height: 18px;
 }
 
 img,
@@ -86,45 +108,24 @@ svg {
   max-width: 100%;
 }
 
-input {
-  background-color: transparent;
-  border: 1px solid #e1e3e4;
-  border-radius: 8px;
-  padding: 16px 16px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 150%;
-}
-input::placeholder {
-  color: #fdfdfd;
-}
-
-label {
-  color: #fdfdfd;
-}
-label svg {
-  height: 18px;
-  width: 18px;
-}
-
 ul[class],
 ol[class] {
   list-style: none;
 }
 
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
 a {
-  color: #f2be22;
+  color: #F2BE22;
   font-weight: 600;
   text-decoration: none;
   transition: 0.3s;
 }
 a:hover {
   text-decoration: underline;
-  color: #1a3e3e;
+  color: #1A3E3E;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
 }
 
 img:not([alt]),
@@ -139,38 +140,38 @@ h4,
 h5,
 h6 {
   font-weight: 800;
-  color: #1a3e3e;
+  color: #1A3E3E;
   margin-bottom: 1em;
 }
 
 h1 {
   font-size: 50px;
-  line-height: 150%;
+  line-height: 1.5;
 }
 
 h2 {
   font-size: 32px;
-  line-height: 120%;
+  line-height: 1.2;
 }
 
 h3 {
   font-size: 26px;
-  line-height: 120%;
+  line-height: 1.2;
 }
 
 h4 {
   font-size: 24px;
-  line-height: 133%;
+  line-height: 1.33;
 }
 
 h5 {
   font-size: 20px;
-  line-height: 120%;
+  line-height: 1.2;
 }
 
 h6 {
   font-size: 18px;
-  line-height: 111%;
+  line-height: 1.11;
 }
 
 p {
@@ -180,6 +181,49 @@ p {
 
 footer {
   margin-top: auto;
+}
+
+.container {
+  max-width: 1204px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 13px 22px;
+  transition: 0.3s;
+  display: inline-block;
+}
+.btn:hover {
+  text-decoration: none;
+}
+.btn.btn_primary {
+  background-color: #1A3E3E;
+  color: #FDFDFD;
+}
+.btn.btn_primary:hover {
+  border-color: #1A3E3E;
+  background-color: #FDFDFD;
+  color: #1A3E3E;
+}
+.btn.btn_lg {
+  padding: 17px 34px;
+}
+.btn.btn_secondary {
+  border: 1px solid #FDFDFD;
+  background-color: #FDFDFD;
+  color: #1A3E3E;
+}
+.btn.btn_secondary:hover {
+  background-color: #1A3E3E;
+  color: #FDFDFD;
+  border-color: #1A3E3E;
 }
 
 .input-box {
@@ -192,24 +236,21 @@ footer {
 }
 .input-box label.label-icon {
   position: absolute;
-  top: 18px;
-  right: 18px;
-}
-.input-box:hover .date-input::placeholder {
-  color: #f2be22;
+  top: 20px;
+  right: 20px;
 }
 .input-box:hover .date-input + label {
-  color: #f2be22;
+  color: #F2BE22;
 }
 
 .nice-select {
   background-color: transparent;
-  border: 1px solid #e1e3e4;
   border-radius: 8px;
+  border: 1px solid #FDFDFD;
   padding: 0 36px 0 16px;
   font-weight: 700;
   font-size: 16px;
-  color: #fdfdfd;
+  color: #FDFDFD;
   height: 58px;
   line-height: 58px;
 }
@@ -217,8 +258,8 @@ footer {
   border-bottom: 2px solid #FDFDFD;
   border-right: 2px solid #FDFDFD;
   height: 11px;
-  margin-top: -8px;
   width: 11px;
+  margin-top: -8px;
   right: 16px;
 }
 .nice-select .nice-select-dropdown {
@@ -244,8 +285,8 @@ footer {
 }
 
 ::selection {
-  background-color: #1a3e3e;
-  color: #f2be22;
+  background-color: #1A3E3E;
+  color: #F2BE22;
 }
 
 header {
@@ -254,7 +295,7 @@ header {
   height: 60px;
   padding: 15px 12px;
   background: #ffffff;
-  color: #f3f5f4;
+  color: #F3F5F4;
 }
 
 footer {
@@ -264,6 +305,6 @@ footer {
   align-items: center;
   justify-content: flex-end;
   padding: 0 12px;
-  color: #f3f5f4;
+  color: #F3F5F4;
 }
 /*# sourceMappingURL=style.css.map */

@@ -3,74 +3,71 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="theme-color" content="#1A3E3E">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Румтибет</title>
-    <link rel="shortcut icon" href="./assets/img/favicon.svg">
+    <meta name="theme-color" content="#1a3e3e">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>dev-rumtibet</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./reset.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/nice-select2.css" />
+    <link rel="stylesheet" href="./assets/css/hamburgers.css" />
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-
-    <header>
-        <h2>Header</h2>
-    </header>
+    <section class="header">
+        <div class="container">
+            <h2>header</h2>
+        </div>
+    </section>
     <main>
         <div class="ui-grid">
             <div class="ui-item">
-                <h4>Colors</h4>
+                <h4>colors</h4>
                 <ul class="ui-grid">
                     <li class="ui-item">
                         <figure>
-                            <div style="width: 150px; height: 150px; background-color: #1A3E3E; border: 1px solid;">
-                            </div>
-                            <figurecaption>$primary-color: #1A3E3E;</figurecaption>
+                            <div style="background-color: #1A3E3E; width: 150px; height: 150px; border: 1px solid;"></div>
+                            <figcaption> $primary-color: #1A3E3E;</figcaption>
                         </figure>
                     </li>
                     <li class="ui-item">
                         <figure>
-                            <div style="width: 150px; height: 150px; background-color: #F3F5F4; border: 1px solid;">
-                            </div>
-                            <figurecaption>$bg-color: #F3F5F4;</figurecaption>
+                            <div style="background-color: #F3F5F4; width: 150px; height: 150px; border: 1px solid;"></div>
+                            <figcaption>$bg-color: #F3F5F4;</figcaption>
                         </figure>
                     </li>
                     <li class="ui-item">
                         <figure>
-                            <div style="width: 150px; height: 150px; background-color: #F2BE22; border: 1px solid;">
-                            </div>
-                            <figurecaption>$text-accent-color: #F2BE22;</figurecaption>
+                            <div style="background-color: #F2BE22; width: 150px; height: 150px; border: 1px solid;"></div>
+                            <figcaption>$text-accent-color: #F2BE22;</figcaption>
                         </figure>
                     </li>
                     <li class="ui-item">
                         <figure>
-                            <div style="width: 150px; height: 150px; background-color: #ffffff; border: 1px solid;">
-                            </div>
-                            <figurecaption>$bg-accent-color: #ffffff;</figurecaption>
+                            <div style="background-color: #ffffff; width: 150px; height: 150px; border: 1px solid;"></div>
+                            <figcaption>$bg-accent-color: #ffffff;</figcaption>
                         </figure>
                     </li>
                     <li class="ui-item">
                         <figure>
-                            <div style="width: 150px; height: 150px; background-color: #FDFDFD; border: 1px solid;">
-                            </div>
-                            <figurecaption>$brand-light-color: #FDFDFD;</figurecaption>
+                            <div style="background-color: #FDFDFD; width: 150px; height: 150px; border: 1px solid;"></div>
+                            <figcaption>$brand-light-color: #FDFDFD;</figcaption>
                         </figure>
                     </li>
                     <li class="ui-item">
                         <figure>
-                            <div style="width: 150px; height: 150px; background-color: #18121E; border: 1px solid;">
-                            </div>
-                            <figurecaption>$barnd-dark-color: #18121E;</figurecaption>
+                            <div style="background-color: #18121E; width: 150px; height: 150px; border: 1px solid;"></div>
+                            <figcaption>$barnd-dark-color: #18121E;</figcaption>
                         </figure>
                     </li>
                 </ul>
             </div>
             <div class="ui-item">
-                <h2>text color, font bold, font italic, link, ::selection</h2>
+                <h4>text color, font bold, font italik, link, ::selection</h4>
                 <p>
                     <strong>
                         Lorem ipsum dolor sit amet.
@@ -94,20 +91,20 @@
                 </p>
             </div>
             <div class="ui-item">
-                <h4>font-family</h4>
+                <h4>Font-family</h4>
                 <ul>
                     <li style="font-family: 'Next-ART';">Next-ART</li>
                     <li style="font-family: 'NunitoSans';">NunitoSans</li>
                 </ul>
             </div>
             <div class="ui-item">
-                <h4>font-weigth</h4>
+                <h4>Font-weight</h4>
                 <ul>
-                    <li style="font-weight: 300;">300 - Lorem, ipsum dolor.</li>
-                    <li style="font-weight: 400;">400 - Lorem, ipsum dolor.</li>
-                    <li style="font-weight: 600;">600 - Lorem, ipsum dolor.</li>
-                    <li style="font-weight: 700;">700 - Lorem, ipsum dolor.</li>
-                    <li style="font-weight: 800;">800 - Lorem, ipsum dolor.</li>
+                    <li style="font-weight: 300;"> 300 - Lorem ipsum dolor sit.</li>
+                    <li style="font-weight: 400;"> 400 - Lorem ipsum dolor sit.</li>
+                    <li style="font-weight: 600;"> 600 - Lorem ipsum dolor sit.</li>
+                    <li style="font-weight: 700;"> 700 - Lorem ipsum dolor sit.</li>
+                    <li style="font-weight: 800;"> 800 - Lorem ipsum dolor sit.</li>
                 </ul>
             </div>
             <div class="ui-item">
@@ -120,8 +117,7 @@
                 <h6>Lorem ipsum dolor sit.</h6>
             </div>
             <div class="ui-item" style="background: url(./assets/img/banner.png) center / cover;">
-
-                <h4>Исследуйте все горные массивы мира вместе с нами</h4>
+                <h4>inputs & selects</h4>
 
                 <form style="padding: 48px; background-color: #ffffff33; backdrop-filter: blur(6px); border-radius: 10px;">
                     <div class="input-box">
@@ -159,14 +155,14 @@
                             <option value="10">10 человек</option>
                             <option value="more">больше 10 человек</option>
                         </select>
-                        <label for="select">минимум 4 человека</label>
+                        <label for="members-select">минимум 4 человека</label>
                     </div>
 
                 </form>
 
             </div>
 
-            <div class="ui-item" style="background:#e2d0d0bd">
+            <div class="ui-item" style="background:#dee2d0bd">
                 <h4>Buttons</h4>
                 <a href="#" class="btn btn_primary">Консультация</a>
                 <button type="button" class="btn btn_primary">Консультация</button>
@@ -187,7 +183,7 @@
     }
 
     .ui-item {
-        border: 1px solid #5e5e5e;
+        border: 1px solid #5c5c5c;
         padding: 24px;
     }
 
@@ -207,11 +203,16 @@
                 </clipPath>
             </defs>
         </symbol>
+        <symbol id="icon-telegram" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2.66675C8.63999 2.66675 2.66666 8.64008 2.66666 16.0001C2.66666 23.3601 8.63999 29.3334 16 29.3334C23.36 29.3334 29.3333 23.3601 29.3333 16.0001C29.3333 8.64008 23.36 2.66675 16 2.66675ZM22.1867 11.7334C21.9867 13.8401 21.12 18.9601 20.68 21.3201C20.4933 22.3201 20.12 22.6534 19.7733 22.6934C19 22.7601 18.4133 22.1868 17.6667 21.6934C16.4933 20.9201 15.8267 20.4401 14.6933 19.6934C13.3733 18.8268 14.2267 18.3468 14.9867 17.5734C15.1867 17.3734 18.6 14.2668 18.6667 13.9867C18.6759 13.9443 18.6747 13.9003 18.6631 13.8585C18.6515 13.8167 18.6298 13.7783 18.6 13.7468C18.52 13.6801 18.4133 13.7067 18.32 13.7201C18.2 13.7467 16.3333 14.9868 12.6933 17.4401C12.16 17.8001 11.68 17.9868 11.2533 17.9734C10.7733 17.9601 9.86666 17.7068 9.18666 17.4801C8.34666 17.2134 7.69332 17.0668 7.74666 16.6001C7.77332 16.3601 8.10666 16.1201 8.73332 15.8668C12.6267 14.1734 15.2133 13.0534 16.5067 12.5201C20.2133 10.9734 20.9733 10.7067 21.48 10.7067C21.5867 10.7067 21.84 10.7334 22 10.8667C22.1333 10.9734 22.1733 11.1201 22.1867 11.2268C22.1733 11.3068 22.2 11.5468 22.1867 11.7334Z" fill="currentColor" />
+        </symbol>
+
     </svg>
     <a href="ui-kit.html"
-        style="position: fixed; bottom: 12px; left: 18px; background-color: #ff0000; color: #ffffff; padding: 6px 18px; border-radius: 50%; text-decoration: none; font-weight: 600;">ui-kit</a>
+	style="position: fixed; bottom: 12px; left: 18px; background-color: #ff0000; color: #ffffff; padding: 6px 18px; border-radius: 50%; text-decoration: none; font-weight: 600;">ui-kit</a>
     <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.min.js"></script>
-    <script async src="./assets/js/custom.js"></script>
+    <script src="assets/js/nice-select2.js"></script>
+    <script src="assets/js/custom.js"></script>
 </body>
 
 </html>
