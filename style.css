@@ -60,7 +60,7 @@ body {
   font-size: 16px;
   background: #F3F5F4;
   color: #18121E;
-  font-family: "NunitoSans";
+  font-family: "NunitoSans", sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -92,7 +92,7 @@ input,
 button,
 textarea,
 select {
-  font-family: "NunitoSans";
+  font-family: "NunitoSans", sans-serif;
 }
 
 input {
