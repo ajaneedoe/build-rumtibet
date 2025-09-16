@@ -64,11 +64,30 @@ body {
   display: flex;
   flex-direction: column;
 }
+body.overlay:before {
+  z-index: 20;
+}
+body.overlay .modal {
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body:before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  transition: background-color 0.5s;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0);
+  z-index: -10;
+}
 
 button {
   cursor: pointer;
 }
 
+a,
 input,
 button,
 textarea,
@@ -80,11 +99,13 @@ input {
   background-color: transparent;
   border: 1px solid #e1e3e4;
   border-radius: 8px;
-  padding: 16px;
+  padding: 13px 16px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.5;
-  color: #FDFDFD;
+  color: #fdfdfd;
+  max-width: 270px;
+  width: 100%;
 }
 input::placeholder {
   color: #FDFDFD;
@@ -94,8 +115,8 @@ label {
   color: #FDFDFD;
 }
 label svg {
-  width: 18px;
   height: 18px;
+  width: 18px;
 }
 
 img,
@@ -184,6 +205,7 @@ footer {
 }
 
 .container {
+  width: 100%;
   max-width: 1204px;
   padding-left: 12px;
   padding-right: 12px;
@@ -192,13 +214,13 @@ footer {
 }
 
 .btn {
-  border: 1px solid transparent;
   border-radius: 4px;
   font-weight: 600;
-  line-height: 1;
-  padding: 13px 22px;
-  transition: 0.3s;
+  padding: 13px 24px;
+  border: 1px solid transparent;
+  transition: 0.4s;
   display: inline-block;
+  line-height: 1;
 }
 .btn:hover {
   text-decoration: none;
@@ -226,18 +248,62 @@ footer {
   border-color: #1A3E3E;
 }
 
+.btn-play {
+  position: absolute;
+  background: rgba(255, 255, 255, 0);
+  inset: 0;
+  border-radius: 24px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+.btn-play span {
+  width: 50px;
+  height: 50px;
+  background: rgba(253, 253, 253, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  color: #1A3E3E;
+  transition: background-color 0.3s;
+}
+.btn-play svg {
+  width: 15px;
+  height: 16px;
+}
+.btn-play:hover {
+  background: rgba(255, 255, 255, 0.1333333333);
+}
+.btn-play:hover span {
+  background: #fdfdfd;
+}
+.btn-play:hover svg {
+  color: #F2BE22;
+}
+
 .input-box {
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 100%;
 }
 .input-box label {
   cursor: pointer;
+  font-size: 14px;
+  padding: 9px 0 0 10px;
 }
 .input-box label.label-icon {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 17px;
+  right: 15px;
+  padding: 0;
+}
+.input-box:hover .date-input::placeholder {
+  color: #F2BE22;
 }
 .input-box:hover .date-input + label {
   color: #F2BE22;
@@ -245,22 +311,24 @@ footer {
 
 .nice-select {
   background-color: transparent;
+  border: 1px solid #e1e3e4;
   border-radius: 8px;
-  border: 1px solid #FDFDFD;
   padding: 0 36px 0 16px;
   font-weight: 700;
   font-size: 16px;
-  color: #FDFDFD;
-  height: 58px;
-  line-height: 58px;
+  color: #fdfdfd;
+  height: 52px;
+  line-height: 52px;
+  width: 100%;
+  max-width: 270px;
 }
 .nice-select:after {
   border-bottom: 2px solid #FDFDFD;
   border-right: 2px solid #FDFDFD;
   height: 11px;
-  width: 11px;
   margin-top: -8px;
-  right: 16px;
+  width: 11px;
+  right: 19px;
 }
 .nice-select .nice-select-dropdown {
   background-color: rgba(255, 255, 255, 0.2);
@@ -280,7 +348,17 @@ footer {
   overflow: hidden;
 }
 
-.d-none {
+.close-modal {
+  color: #ffffff;
+}
+
+.close-modal__svg {
+  width: 36px;
+  height: 36px;
+}
+
+.d-none,
+.hidden-select {
   display: none;
 }
 
@@ -292,7 +370,7 @@ footer {
 .header {
   padding: 16px 0;
   margin-bottom: -104px;
-  z-index: 1;
+  z-index: 10;
 }
 .header .container {
   display: flex;
