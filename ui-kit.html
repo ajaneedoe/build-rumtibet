@@ -227,6 +227,90 @@
     <footer>
         <h4>Footer</h4>
     </footer>
+    <div class="modal">
+        <button id="close-modal" class="close-modal" type="button">
+            <svg class="close-modal__svg" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon-close-modal"></use>
+            </svg>
+        </button>
+        <form class="first-screen-form modal__first-screen-form">
+            <div class="input-box">
+                <select name="locations" id="locations-select" class="hidden-select">
+                    <option value="kyiv">Киев</option>
+                    <option value="lviv">Львов</option>
+                    <option value="odesa">Одесса</option>
+                    <option value="carpathians">Карпаты</option>
+                    <option value="kamianets">Каменец-Подольский</option>
+                    <option value="chernivtsi">Черновцы</option>
+                    <option value="kharkiv">Харьков</option>
+                    <option value="dnipro">Днепр</option>
+                    <option value="uzhhorod">Ужгород</option>
+                    <option value="bukovel">Буковель</option>
+                </select>
+                <div class="nice-select" tabindex="0">
+                    <span class="current">Локация для тура</span>
+                    <div class="nice-select-dropdown">
+                        <div class="nice-select-search-box">
+                            <input type="text" class="nice-select-search" placeholder="zoek..." title="search">
+                        </div>
+                        <ul class="list">
+                            <li data-value="kyiv" class="option">Киев</li>
+                            <li data-value="lviv" class="option">Львов</li>
+                            <li data-value="odesa" class="option">Одесса</li>
+                            <li data-value="carpathians" class="option">Карпаты</li>
+                            <li data-value="kamianets" class="option">Каменец-Подольский</li>
+                            <li data-value="chernivtsi" class="option">Черновцы</li>
+                            <li data-value="kharkiv" class="option">Харьков</li>
+                            <li data-value="dnipro" class="option">Днепр</li>
+                            <li data-value="uzhhorod" class="option">Ужгород</li>
+                            <li data-value="bukovel" class="option">Буковель</li>
+                        </ul>
+                    </div>
+                </div>
+                <label for="locations-select">выберите из списка</label>
+            </div>
+            <div class="input-box">
+                <input id="date" class="date-input" type="text" placeholder="Дата похода">
+                <label for="date" class="label-icon">
+                    <svg>
+                        <use href="#date-icon"></use>
+                    </svg>
+                </label>
+                <label for="date">выберете дату</label>
+            </div>
+            <div class="input-box">
+                <select name="members" id="members-select" class="hidden-select">
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="more">более 10</option>
+                </select>
+                <div class="nice-select" tabindex="0">
+                    <span class="current">Участники</span>
+                    <div class="nice-select-dropdown">
+                        <ul class="list">
+                            <li data-value="4" class="option">4</li>
+                            <li data-value="5" class="option">5</li>
+                            <li data-value="6" class="option">6</li>
+                            <li data-value="7" class="option">7</li>
+                            <li data-value="8" class="option">8</li>
+                            <li data-value="9" class="option">9</li>
+                            <li data-value="10" class="option">10</li>
+                            <li data-value="more" class="option">более 10</li>
+                        </ul>
+                    </div>
+                </div>
+                <label for="members-select">минимум 4 человека</label>
+            </div>
+            <div class="input-box">
+                <button type="submit" class="btn btn_secondary btn_lg">Найти программу</button>
+            </div>
+        </form>
+    </div>
     <svg class="d-none">
         <symbol id="btn-play" viewBox="0 0 15 16">
             <path d="M3.24267 0.655715C2.96389 0.496474 2.64819 0.413232 2.32714 0.414317C2.00609 0.415402 1.69096 0.500775 1.41326 0.661897C1.13557 0.823018 0.905057 1.05424 0.744785 1.33242C0.584513 1.6106 0.500104 1.926 0.5 2.24705V13.7549C0.500104 14.0759 0.584513 14.3913 0.744785 14.6695C0.905057 14.9477 1.13557 15.1789 1.41326 15.34C1.69096 15.5012 2.00609 15.5865 2.32714 15.5876C2.64819 15.5887 2.96389 15.5055 3.24267 15.3462L13.3113 9.59138C13.5917 9.43097 13.8248 9.19931 13.9869 8.91986C14.1489 8.64041 14.2343 8.3231 14.2343 8.00005C14.2343 7.677 14.1489 7.35969 13.9869 7.08024C13.8248 6.80079 13.5917 6.56913 13.3113 6.40872L3.24267 0.655715Z" fill="currentColor" />

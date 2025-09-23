@@ -37,6 +37,7 @@ body {
   flex-direction: column;
 }
 body.overlay:before {
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
 }
 body.overlay .modal {
@@ -435,6 +436,29 @@ footer {
   color: #F3F5F4;
 }
 
+.modal {
+  position: fixed;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s, top 0.5s;
+  z-index: 20;
+}
+
+#close-modal {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  z-index: 10;
+  border: none;
+  background: transparent;
+  transition: transform 0.3s;
+}
+#close-modal:hover {
+  transform: rotate(180deg);
+}
+
 @media (min-width: 1025px) {
   .hamburger,
   #show-program,
@@ -443,6 +467,14 @@ footer {
   }
   .header__mobile-container {
     margin-left: auto;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .btn.btn_lg {
+    padding: 17px 24px;
+  }
+  .about__container {
+    gap: 72px;
   }
 }
 @media screen and (max-width: 1024px) {
